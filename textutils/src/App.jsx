@@ -3,12 +3,15 @@ import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
+import TextForm from "./components/TextForm";
 
 function App() {
   return (
     <>
     <NavBar title ="TextUtils" aboutText="About Us" />
-   
+    <div className="container">
+      <TextForm heading ="Enter a text to analyze below"/>
+    </div>
     </>
   )
 }
