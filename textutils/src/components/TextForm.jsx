@@ -15,6 +15,26 @@ export default function TextForm(props) {
       let newText = text.toLowerCase()
       setText(newText)
     }
+
+    // To copy text to clipboard 
+    const handleCopy=()=>{
+    const copyText = document.getElementById("myBox")
+    copyText.select();
+    navigator.clipboard.writeText(copyText.value);
+    }
+    
+    // To clear the text 
+    const clearText = ()=>{
+    setText(" ");
+    setPreview(" ");
+    }
+
+    // To remove extra spaces
+    const handleExtraSpaces = ()=>{
+      let newText = text.split(/[ ]+/)
+      setText(newText.join(" "))
+    }
+
     const previewText = () => {
       setPreview(text);   // take current text and save it in preview state
    };
@@ -31,7 +51,7 @@ export default function TextForm(props) {
     const charaWithoutSpace = text.replace(/\s/g,"").length;
     const sentences = text.trim()=== "" ? 0 : text.split(/[!?.]+/).filter(Boolean).length;
     const para = text.trim()==="" ? 0 : text.split(/\n+/).filter(p=> p.trim()!=="").length;
-    const CharaWithSpaces = text.length;
+    const CharaWithSpaces = text === " " ? 0 :text.length;
     const secondsPerWord = 0.3;
     const totalSeconds = Math.round(wordCount*secondsPerWord);
     const hour = Math.floor(totalSeconds/3600);
@@ -46,6 +66,9 @@ export default function TextForm(props) {
         </div>
          <button type="button" className="btn btn-primary mx-1" onClick={upperCaseText}>Convert to uppercase</button>
          <button type="button" className="btn btn-primary mx-1" onClick={lowerCaseText}>Convert to lowercase</button>
+         <button type="button" className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text </button>
+         <button type="button" className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Space </button>
+         <button type="button" className="btn btn-primary mx-1" onClick={clearText}>Clear Text </button>
       </div>
 
       <div className='container mt-4' >
