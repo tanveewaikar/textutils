@@ -20,7 +20,7 @@ function App() {
     <>
     <NavBar title ="TextUtils" aboutText="About Us" mode ={mode} toggleMode={toggleMode}/>
     <div className="container">
-      <TextForm heading ="Enter a text to analyze below"/>
+      <TextForm heading ="Enter a text to analyze below" mode ={mode}/>
     </div>
     {/* <AboutUs/> */}
     </>

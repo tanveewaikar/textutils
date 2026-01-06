@@ -1,0 +1,21 @@
+.buttons-light{
+    background-color: #2563EB;
+    color: #FFFFFF;
+}
+.buttons-light:hover{
+    background-color: #1D4ED8;
+}
+.buttons-dark{
+background-color: #38BDF8;
+color: #020617;
+}
+.buttons-dark:hover{
+background-color: #0EA5E9;
+}
+.card-container-light{
+    background-color: #F1F5F9;
+}
+.card-container-dark{
+background-color: #1E293B;
+color: #FFFFFF;
+}

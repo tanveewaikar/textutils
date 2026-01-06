@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-
+import "./TextForm.css"
 
 export default function TextForm(props) {
     // To convert text in upperCase
@@ -59,19 +59,19 @@ export default function TextForm(props) {
     const sec = Math.floor(totalSeconds % 60);
   return (
     <>
-      <div className='container'>
+      <div className="container">
         <h1>{props.heading}</h1>
         <div className ="mb-3">
-         <textarea className ='form-control' value = {text} onChange={handleOnChange} id='myBox'rows='8'/>
+         <textarea className ='form-control ' value = {text} onChange={handleOnChange} id='myBox'rows='8' style ={{backgroundColor: props.mode==="light"? "#e6e8ea": "#0F172A", color: props.mode==="light" ? "black" : "white"}}/>
         </div>
-         <button type="button" className="btn btn-primary mx-1" onClick={upperCaseText}>Convert to uppercase</button>
-         <button type="button" className="btn btn-primary mx-1" onClick={lowerCaseText}>Convert to lowercase</button>
-         <button type="button" className="btn btn-primary mx-1" onClick={handleCopy}>Copy Text </button>
-         <button type="button" className="btn btn-primary mx-1" onClick={handleExtraSpaces}>Remove Extra Space </button>
-         <button type="button" className="btn btn-primary mx-1" onClick={clearText}>Clear Text </button>
+         <button type="button" className={`btn btn-primary mx-2 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={upperCaseText}>Convert to uppercase</button>
+         <button type="button" className={`btn btn-primary mx-2 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={lowerCaseText}>Convert to lowercase</button>
+         <button type="button" className={`btn btn-primary mx-2 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={handleCopy}>Copy Text </button>
+         <button type="button" className={`btn btn-primary mx-2 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={handleExtraSpaces}>Remove Extra Space </button>
+         <button type="button" className={`btn btn-primary mx-2 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={clearText}>Clear Text </button>
       </div>
 
-      <div className='container mt-4' >
+      <div className= {`container mt-4 ${props.mode==="light"? "card-container-light":"card-container-dark"}`} >
       <h2>Your Text summary</h2>
       <div className='container' style={{display:"flex", gap:"40px", marginTop:"20px"}}>
       <div>
@@ -99,7 +99,7 @@ export default function TextForm(props) {
       <div className='container my-4'>
         {/* <p>{text.split(" ").length} Words {text.length} Characters</p>
         <p>{0.008 * text.split(" ").length} Minitues to read </p> */}
-        <button type="button" className="btn btn-primary mx-1" onClick={previewText}>Preview</button>
+        <button type="button" className={` btn btn-primary mx-1 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={previewText}>Preview</button>
         {preview.length > 0 && (
          <>
           <p>{preview}</p>
