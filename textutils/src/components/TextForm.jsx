@@ -71,7 +71,7 @@ export default function TextForm(props) {
          <button type="button" className={`btn btn-primary mx-2 ${props.mode==="light" ? "buttons-light":"buttons-dark"}`} onClick={clearText}>Clear Text </button>
       </div>
 
-      <div className= {`container mt-4 ${props.mode==="light"? "card-container-light":"card-container-dark"}`} >
+      <div className= {` mainSec container mt-4 ${props.mode==="light"? "card-container-light":"card-container-dark"}`} >
       <h2>Your Text summary</h2>
       <div className='container' style={{display:"flex", gap:"40px", marginTop:"20px"}}>
       <div>
