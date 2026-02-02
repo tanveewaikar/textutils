@@ -34,7 +34,7 @@
 }
 
 .mainSec{
-    height: 35vh;
+    height: 40vh;
 }
 button:disabled {
   opacity: 0.6;
@@ -44,6 +44,10 @@ button:disabled {
   padding: 15px;
   border-radius: 12px;
   min-height: 80px;
+}
+.preview-wrapper {
+  display: block;
+  margin-top: 24px;
 }
 .btn-group-flex {
   display: flex;
