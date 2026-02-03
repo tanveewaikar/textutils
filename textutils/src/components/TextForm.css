@@ -33,9 +33,12 @@
   box-shadow: 0 10px 30px rgba(0,0,0,0.4);
 }
 
-.mainSec{
-    height: 40vh;
-}
+/* .mainSec{
+    height: auto;
+    overflow-x: hidden;
+    overflow-y: visible;
+    max-width: 100%;
+} */
 button:disabled {
   opacity: 0.6;
   cursor: not-allowed;

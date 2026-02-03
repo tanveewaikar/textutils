@@ -1,0 +1,128 @@
+body{
+    overflow-x: hidden;
+}
+/* ===== SUMMARY STATS ===== */
+.summary-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.summary-stats h2 {
+  font-size: 2rem;
+  margin-bottom: 4px;
+}
+
+.summary-stats p {
+  margin: 0;
+  opacity: 0.85;
+}
+
+@media (max-width: 768px) {
+
+  /* ---------- Global ---------- */
+  .container {
+    padding: 14px;
+  }
+
+  /* ---------- Headings ---------- */
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  h2 {
+    font-size: 1.25rem;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+  }
+
+  /* ---------- Textarea ---------- */
+  textarea {
+    font-size: 14px;
+    min-height: 150px;
+  }
+
+  /* ---------- Buttons ---------- */
+  .btn-group-flex {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-group-flex button {
+    width: 100%;
+    margin: 0;
+  }
+
+  /* ---------- Summary stats ---------- */
+ 
+ .summary-stats {
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 24px;
+  }
+
+  .summary-stats h2 {
+    font-size: 1.7rem;
+  }
+
+  /* ---------- Summary card ---------- */
+  .mainSec {
+    padding: 16px;
+  }
+
+  /* ---------- Preview ---------- */
+  .preview-wrapper button {
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .preview-box {
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  /* ---------- Alerts ---------- */
+  .alert {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* ---------- About Page ---------- */
+  ul {
+    padding-left: 18px;
+  }
+
+  li {
+    margin-bottom: 6px;
+    font-size: 0.95rem;
+  }
+}
+
+/* ---------- Extra small devices ---------- */
+@media (max-width: 480px) {
+
+ .summary-stats {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 1.35rem;
+  }
+
+  h2 {
+    font-size: 1.15rem;
+  }
+
+  textarea {
+    font-size: 13px;
+  }
+
+  .btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+}
+ 

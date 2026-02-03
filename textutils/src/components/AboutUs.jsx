@@ -5,7 +5,9 @@ export default function AboutUs(props) {
     color: props.mode === "dark" ? "#E5E7EB" : "#020617",
     backgroundColor: props.mode === "dark" ? "#020617" : "#FFFFFF",
     borderRadius: "12px",
-    padding: "20px"
+    padding: "20px",
+    border: props.mode === "dark" ? "1px solid skyblue" : "1px solid #6a6a6d",
+    boxShadow: props.mode === "dark" ? "0 20px 30px rgba(0, 0, 0, 0.5)" : "0 6px 20px rgba(2, 6, 23, 0.15)"
   };
 
   return (

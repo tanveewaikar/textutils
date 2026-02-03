@@ -94,105 +94,27 @@ export default function TextForm(props) {
   return (
     <>
       <div className="container">
-        <h1
-          className={`mb-3 text-${props.mode === "light" ? "dark" : "light"}`}
-        >
+        <h1 className={`mb-3 text-${props.mode === "light" ? "dark" : "light"}`}>
           {props.heading}
         </h1>
 
         <div className="mb-3">
-          <textarea
-            className={`form-control ${props.mode === "dark" ? "textarea-dark" : ""}`}
-            value={text}
-            onChange={handleOnChange}
-            id="myBox"
-            rows="8"
-          />
+          <textarea className={`form-control ${props.mode === "dark" ? "textarea-dark" : ""}`}  value={text} onChange={handleOnChange} id="myBox" rows="8"  />
         </div>
         <div className="btn-group-flex">
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={upperCaseText}
-          >
-            {" "}
-            <i className="fa-solid fa-text-height me-1"></i> Uppercase
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={lowerCaseText}
-          >
-            {" "}
-            <i className="fa-solid fa-text-width me-1"></i> Lowercase
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={handleCopy}
-          >
-            {" "}
-            <i className="fa-solid fa-copy me-1"></i> Copy Text{" "}
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={handleExtraSpaces}
-          >
-            {" "}
-            <i className="fa-solid fa-scissors me-1"></i> Remove Extra
-            Spaces{" "}
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={clearText}
-          >
-            {" "}
-            <i className="fa-solid fa-trash me-1"></i> Clear Text{" "}
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={revText}
-          >
-            {" "}
-            <i className="fa-solid fa-arrows-rotate me-1"></i> Reverse Text{" "}
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={removeSpecialChar}
-          >
-            {" "}
-            <i className="fa-solid fa-filter me-1"></i> Remove Special
-            Characters
-          </button>
-          <button
-            type="button"
-            className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-            disabled={text.length === 0}
-            onClick={capitalizeEachWord}
-          >
-            {" "}
-            <i className="fa-solid fa-font me-1"></i> Capitalize Words
-          </button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={upperCaseText} > <i className="fa-solid fa-text-height me-1"></i> Uppercase </button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={lowerCaseText} ><i className="fa-solid fa-text-width me-1"></i> Lowercase </button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={handleCopy} > <i className="fa-solid fa-copy me-1"></i> Copy Text </button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={handleExtraSpaces} ><i className="fa-solid fa-scissors me-1"></i> Remove Extra Spaces</button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={clearText} ><i className="fa-solid fa-trash me-1"></i> Clear Text</button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={revText}  >  <i className="fa-solid fa-arrows-rotate me-1"></i> Reverse Text </button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={capitalizeEachWord} > <i className="fa-solid fa-font me-1"></i> Capitalize Words  </button>
         </div>
       </div>
 
-      <div
-        className={` mainSec container mt-4 ${props.mode === "light" ? "card-container-light" : "card-container-dark"}`}>
+      <div className={` mainSec container mt-4 ${props.mode === "light" ? "card-container-light" : "card-container-dark"}`}>
         <h2>Your Text summary</h2>
-        <div
-          className="container"
-          style={{ display: "flex", gap: "40px", marginTop: "20px" }} >
+        <div className="summary-stats">
           <div>
             <h2>{wordCount}</h2>
             <p>Words</p>
@@ -218,26 +140,8 @@ export default function TextForm(props) {
       </div>
 
       <div className="container my-4 preview-wrapper">
-        <button
-          type="button"
-          className={` btn btn-primary mx-1 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`}
-          disabled={text.length === 0}
-          onClick={previewText}
-        >
-          {" "}
-          <i className="fa-solid fa-eye"></i> Preview
-        </button>
-        <div
-          className="preview-box mt-3"
-          style={{
-            backgroundColor: props.mode === "light" ? "#F8FAFC" : "#020617",
-            color: props.mode === "light" ? "#020617" : "#E5E7EB",
-            border:
-              props.mode === "light"
-                ? "1px solid #CBD5E1"
-                : "1px solid #1E293B",
-          }}
-        >
+        <button  type="button"  className={` btn btn-primary mx-1 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={previewText}> <i className="fa-solid fa-eye"></i> Preview  </button>
+        <div className="preview-box mt-3" style={{  backgroundColor: props.mode === "light" ? "#F8FAFC" : "#020617",  color: props.mode === "light" ? "#020617" : "#E5E7EB",  border:  props.mode === "light" ? "1px solid #CBD5E1"  : "1px solid #1E293B", }}>
           {preview.trim().length === 0 ? (
             <p className="mb-0">Nothing to preview</p>
           ) : (
