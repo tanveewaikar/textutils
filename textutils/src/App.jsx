@@ -1,12 +1,10 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
 import "./App.css";
 import NavBar from "./components/NavBar";
 import TextForm from "./components/TextForm";
 import AboutUs from "./components/AboutUs";
 import Alerts from "./components/Alerts";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 
 function App() {
@@ -35,7 +33,7 @@ function App() {
   }
   return (
     <>
-    <BrowserRouter>
+    <HashRouter>
     <NavBar title ="TextUtils" aboutText="About Us" mode ={mode} toggleMode={toggleMode}/>
     <Alerts alert = {alert}/>
     <div className="container">
@@ -44,7 +42,7 @@ function App() {
     <Route exact path="/about" element={<AboutUs mode={mode}/>}/>
     </Routes>
     </div>
-    </BrowserRouter>
+    </HashRouter>
     </>
   )
 }
