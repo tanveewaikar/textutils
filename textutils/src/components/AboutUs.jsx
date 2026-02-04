@@ -21,11 +21,15 @@ export default function AboutUs(props) {
 
       <h3 className="mt-4"> Features</h3>
       <ul>
-        <li>Convert text to Uppercase and Lowercase</li>
-        <li>Word, character, sentence, and paragraph count</li>
-        <li>Estimated reading time calculation</li>
-        <li>Text preview before final use</li>
-        <li>Clean and user-friendly interface</li>
+       <li>Convert text to Uppercase and Lowercase</li>
+       <li>Remove extra spaces and special characters</li>
+       <li>Capitalize words and reverse text</li>
+       <li>Copy text to clipboard</li>
+       <li>Word, character, sentence, and paragraph count</li>
+       <li>Estimated reading time calculation</li>
+       <li>Text preview before final use</li>
+       <li>Dark and Light mode support</li>
+       <li>Clean, responsive, and user-friendly interface</li>
       </ul>
 
       <p className="mt-3">

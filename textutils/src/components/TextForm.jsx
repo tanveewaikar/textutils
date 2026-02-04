@@ -108,6 +108,7 @@ export default function TextForm(props) {
           <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={handleExtraSpaces} ><i className="fa-solid fa-scissors me-1"></i> Remove Extra Spaces</button>
           <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={clearText} ><i className="fa-solid fa-trash me-1"></i> Clear Text</button>
           <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={revText}  >  <i className="fa-solid fa-arrows-rotate me-1"></i> Reverse Text </button>
+          <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={removeSpecialChar} > <i className="fa-solid fa-font me-1"></i> Remove special characters</button>
           <button type="button" className={`btn btn-primary mx-2 ${props.mode === "light" ? "buttons-light" : "buttons-dark"}`} disabled={text.length === 0} onClick={capitalizeEachWord} > <i className="fa-solid fa-font me-1"></i> Capitalize Words  </button>
         </div>
       </div>
